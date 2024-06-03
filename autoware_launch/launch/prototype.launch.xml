@@ -54,11 +54,11 @@
       <!-- Modules to be launched -->
       <arg name="launch_vehicle" value="false"/>
       <arg name="launch_system" value="false"/>
-      <arg name="launch_map" value="false"/>
+      <arg name="launch_map" value="true"/>
       <arg name="launch_sensing" value="true"/>
       <arg name="launch_sensing_driver" value="true"/>
       <arg name="launch_localization" value="false"/>
-      <arg name="launch_perception" value="false"/>
+      <arg name="launch_perception" value="true"/>
       <arg name="launch_planning" value="false"/>
       <arg name="launch_control" value="false"/>
       <arg name="launch_api" value="false"/>
