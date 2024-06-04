@@ -52,7 +52,7 @@
       <!-- launch module preset -->
       <arg name="planning_module_preset" value="$(var planning_module_preset)"/>
       <!-- Modules to be launched -->
-      <arg name="launch_vehicle" value="false"/>
+      <arg name="launch_vehicle" value="true"/>
       <arg name="launch_system" value="false"/>
       <arg name="launch_map" value="true"/>
       <arg name="launch_sensing" value="true"/>
