@@ -13,6 +13,7 @@
     description="options: obstacle_pointcloud, occupancy_grid (occupancy_grid_map_method must be laserscan_based_occupancy_grid_map)"
   />
   <arg name="data_path" default="$(env HOME)/autoware_data" description="packages data and artifacts directory path"/>
+  <arg name="image_number" default="1" description="choose image raw number(1-8)"/>
 
   <include file="$(find-pkg-share tier4_perception_launch)/launch/perception.launch.xml">
     <arg name="mode" value="$(var perception_mode)"/>
@@ -24,6 +25,7 @@
     <arg name="objects_validation_method" value="$(var detected_objects_validation_method)"/>
     <arg name="data_path" value="$(var data_path)"/>
     <arg name="use_low_height_cropbox" value="false"/>
+    <arg name="image_number" value="$(var image_number)"/>
 
     <!-- object recognition -->
     <arg
