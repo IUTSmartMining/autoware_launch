@@ -10,7 +10,7 @@
     gnss_enabled: $(var gnss_enabled)
     yabloc_enabled: $(var yabloc_enabled)
     ndt_enabled: $(var ndt_enabled)
-    stop_check_enabled: $(var stop_check_enabled)
+    stop_check_enabled: false
 
     # from gnss
     gnss_particle_covariance:
