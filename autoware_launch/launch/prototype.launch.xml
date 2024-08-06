@@ -59,7 +59,7 @@
       <arg name="launch_map" value="true"/>
       <arg name="launch_sensing" value="true"/>
       <arg name="launch_sensing_driver" value="true"/>
-      <arg name="launch_localization" value="false"/>
+      <arg name="launch_localization" value="true"/>
       <arg name="launch_perception" value="true"/>
       <arg name="launch_planning" value="false"/>
       <arg name="launch_control" value="false"/>
@@ -77,7 +77,8 @@
       <arg name="rviz" value="$(var rviz)"/>
       <arg name="rviz_config" value="$(var rviz_config)"/>
       <arg name="rviz_respawn" value="$(var rviz_respawn)"/>
-        <!-- Perception -->
+      <!-- Perception -->
+      <!-- mode options: camera_lidar_radar_fusion, camera_lidar_fusion, lidar_radar_fusion, lidar, radar -->
       <arg name="perception_mode" value="camera_lidar_radar_fusion"/>
       <arg name="use_traffic_light_recognition" value="false"/>
       <arg name="traffic_light_recognition/enable_fine_detection" value="false"/>
