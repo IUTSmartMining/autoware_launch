@@ -6,6 +6,7 @@
   <arg name="sensor_model" default="sample_sensor_kit" description="sensor model name"/>
   <arg name="data_path" default="$(env HOME)/autoware_data" description="packages data and artifacts directory path"/>
   <arg name="image_number" default="1" description="choose image raw number(1-8)"/>
+  <arg name="log_record" default="true" description="record rosbag"/>
 
   <!-- launch module preset -->
   <arg name="planning_module_preset" default="default" description="planning module preset"/>
@@ -86,5 +87,9 @@
       <arg name="enable_all_modules_auto_mode" value="$(var enable_all_modules_auto_mode)"/>
       <arg name="is_simulation" value="false"/>
     </include>
+  </group>
+
+  <group if="$(var log_record)">
+    <include file="$(find-pkg-share autoware_launch)/launch/log_recorder.launch.py"/>
   </group>
 </launch>
