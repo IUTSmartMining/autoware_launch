@@ -154,18 +154,18 @@
     error_rate: 1.0
     timeout: 1.0
 
-- module: vehicle
-  mode: [online, logging_simulation, planning_simulation]
-  type: autonomous
-  args:
-    node_name_suffix: vehicle_status_steering_status
-    topic: /vehicle/status/steering_status
-    topic_type: autoware_vehicle_msgs/msg/SteeringReport
-    best_effort: false
-    transient_local: false
-    warn_rate: 5.0
-    error_rate: 1.0
-    timeout: 1.0
+# - module: vehicle
+#   mode: [online, logging_simulation, planning_simulation]
+#   type: autonomous
+#   args:
+#     node_name_suffix: vehicle_status_steering_status
+#     topic: /vehicle/status/steering_status
+#     topic_type: autoware_vehicle_msgs/msg/SteeringReport
+#     best_effort: false
+#     transient_local: false
+#     warn_rate: 5.0
+#     error_rate: 1.0
+#     timeout: 1.0
 
 - module: system
   mode: [online, logging_simulation, planning_simulation]
