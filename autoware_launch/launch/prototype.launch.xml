@@ -34,7 +34,7 @@
   <let name="rviz_respawn" value="false" if="$(var scenario_simulation)"/>
   <let name="rviz_respawn" value="true" unless="$(var scenario_simulation)"/>
   <!-- Vcu emulation -->
-  <arg name="vehicle_simulation" default="true" description="use vehicle simulation"/>
+  <arg name="vehicle_simulation" default="false" description="use vehicle simulation"/>
   <!-- Auto mode setting-->
   <arg name="enable_all_modules_auto_mode" default="$(var scenario_simulation)" description="enable all module's auto mode"/>
   <!-- Simulated time -->
@@ -56,14 +56,14 @@
       <arg name="planning_module_preset" value="$(var planning_module_preset)"/>
       <!-- Modules to be launched -->
       <arg name="launch_vehicle" value="true"/>
-      <arg name="launch_system" value="false"/>
+      <arg name="launch_system" value="true"/>
       <arg name="launch_map" value="true"/>
       <arg name="launch_sensing" value="true"/>
       <arg name="launch_sensing_driver" value="true"/>
       <arg name="launch_localization" value="true"/>
       <arg name="launch_perception" value="true"/>
-      <arg name="launch_planning" value="false"/>
-      <arg name="launch_control" value="false"/>
+      <arg name="launch_planning" value="true"/>
+      <arg name="launch_control" value="true"/>
       <arg name="launch_api" value="true"/>
       <!-- Vehicle -->
       <arg name="launch_vehicle_interface" value="$(var launch_vehicle_interface)"/>
