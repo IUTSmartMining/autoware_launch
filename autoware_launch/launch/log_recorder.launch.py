@@ -15,6 +15,20 @@ def generate_launch_description():
         '/autopilot/log/apu_pos',
         '/autopilot/log/apu_speed',
         '/autopilot/log/apu_yaw',
+        '/diagnostics',
+        '/diagnostics_graph',
+        '/control/command/control_cmd',
+        '/system/fail_safe/mrm_state',
+        '/system/mrm/emergency_stop/operate',
+        '/system/mrm/comfortable_stop/operate',
+        '/system/mrm/pull_over_manager/operate',
+        '/sensing/gnss/raynmand/nav_sat_fix',
+        '/sensing/gnss/pose_with_covariance',
+        '/sensing/imu/imu_data',
+        '/vehicle/status/velocity_status',
+        '/sensing/vehicle_velocity_converter/twist_with_covariance',
+        '/localization/pose_twist_fusion_filter/pose_with_covariance',
+        '/localization/twist_estimator/twist_with_covariance',
     ]
 
     return LaunchDescription([
