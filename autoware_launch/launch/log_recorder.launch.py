@@ -24,6 +24,7 @@ def generate_launch_description():
         '/system/mrm/pull_over_manager/operate',
         '/sensing/gnss/raynmand/nav_sat_fix',
         '/sensing/gnss/pose_with_covariance',
+        '/sensing/imu/imu_raw',
         '/sensing/imu/imu_data',
         '/vehicle/status/velocity_status',
         '/sensing/vehicle_velocity_converter/twist_with_covariance',
