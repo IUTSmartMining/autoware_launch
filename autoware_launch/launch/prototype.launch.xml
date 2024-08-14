@@ -7,6 +7,7 @@
   <arg name="data_path" default="$(env HOME)/autoware_data" description="packages data and artifacts directory path"/>
   <arg name="image_number" default="1" description="choose image raw number(1-8)"/>
   <arg name="log_record" default="true" description="record rosbag"/>
+  <arg name="unity_trajectory" default="true" description="launch unity trajectory viewer"/>
 
   <!-- launch module preset -->
   <arg name="planning_module_preset" default="default" description="planning module preset"/>
@@ -80,7 +81,7 @@
       <arg name="rviz_respawn" value="$(var rviz_respawn)"/>
       <!-- Perception -->
       <!-- mode options: camera_lidar_radar_fusion, camera_lidar_fusion, lidar_radar_fusion, lidar, radar -->
-      <arg name="perception_mode" value="camera_lidar_radar_fusion"/>
+      <arg name="perception_mode" value="lidar"/>
       <arg name="use_traffic_light_recognition" value="false"/>
       <arg name="traffic_light_recognition/enable_fine_detection" value="false"/>
       <!-- Auto mode setting-->
@@ -91,5 +92,9 @@
 
   <group if="$(var log_record)">
     <include file="$(find-pkg-share autoware_launch)/launch/log_recorder.launch.py"/>
+  </group>
+
+  <group if="$(var log_record)">
+    <node pkg="unity_trajectory" name="unity_topics" exec="unity_traj_node"/>
   </group>
 </launch>
