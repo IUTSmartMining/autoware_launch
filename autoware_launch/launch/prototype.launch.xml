@@ -94,7 +94,7 @@
     <include file="$(find-pkg-share autoware_launch)/launch/log_recorder.launch.py"/>
   </group>
 
-  <group if="$(var log_record)">
+  <group if="$(var unity_trajectory)">
     <node pkg="unity_trajectory" name="unity_topics" exec="unity_traj_node"/>
   </group>
 </launch>
