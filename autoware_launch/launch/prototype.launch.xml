@@ -7,7 +7,7 @@
   <arg name="data_path" default="$(env HOME)/autoware_data" description="packages data and artifacts directory path"/>
   <arg name="image_number" default="1" description="choose image raw number(1-8)"/>
   <arg name="log_record" default="true" description="record rosbag"/>
-  <arg name="unity_trajectory" default="true" description="launch unity trajectory viewer"/>
+  <arg name="unity_trajectory" default="false" description="launch unity trajectory viewer"/>
 
   <!-- launch module preset -->
   <arg name="planning_module_preset" default="default" description="planning module preset"/>
