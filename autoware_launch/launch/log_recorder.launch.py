@@ -30,6 +30,10 @@ def generate_launch_description():
         '/sensing/vehicle_velocity_converter/twist_with_covariance',
         '/localization/pose_twist_fusion_filter/pose_with_covariance',
         '/localization/twist_estimator/twist_with_covariance',
+        '/planning/scenario_planning/trajectory',
+        '/perception/object_recognition/objects',
+        '/apu/actuatory',
+        '/oau/sensory_raw',
     ]
 
     return LaunchDescription([
