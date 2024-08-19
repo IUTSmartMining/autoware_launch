@@ -9,7 +9,10 @@ def generate_launch_description():
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     custom_folder = f"{os.getenv('HOME')}/rosbags/autoware_prototype/{timestamp}_recording"
     topics = [
+        '/oau/sensory_raw',
         '/oau/sensory',
+        '/oau/actuatory_raw',
+        '/oau/actuatory',
         '/autoware/autopilot',
         '/autopilot/log/gps_pos',
         '/autopilot/log/apu_pos',
@@ -32,8 +35,6 @@ def generate_launch_description():
         '/localization/twist_estimator/twist_with_covariance',
         '/planning/scenario_planning/trajectory',
         '/perception/object_recognition/objects',
-        '/apu/actuatory',
-        '/oau/sensory_raw',
     ]
 
     return LaunchDescription([
