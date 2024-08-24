@@ -2,12 +2,19 @@ from datetime import datetime
 import os
 
 from launch import LaunchDescription
-from launch.actions import ExecuteProcess
+from launch.substitutions import LaunchConfiguration
+from launch.actions import OpaqueFunction, ExecuteProcess, DeclareLaunchArgument
 
-def generate_launch_description():
+def launch_setup(context):
+    folder_name = LaunchConfiguration('folder_name')
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    custom_folder = f"{os.getenv('HOME')}/rosbags/autoware_prototype/{timestamp}_recording"
+    path = os.path.join(
+        os.getenv('HOME'),
+        'rosbags',
+        folder_name.perform(context),
+        f'{timestamp}_recording'
+    )
     topics = [
         '/oau/sensory_raw',
         '/oau/sensory',
@@ -37,9 +44,17 @@ def generate_launch_description():
         '/perception/object_recognition/objects',
     ]
 
+    return [ExecuteProcess(
+        cmd=['ros2', 'bag', 'record'] + topics + ['-o', path],
+        output='screen')]
+
+def generate_launch_description():
+    folder_name_arg = DeclareLaunchArgument(
+        'folder_name',
+        description='Name of the folder to store the recorded rosbag'
+    )
+    
     return LaunchDescription([
-        ExecuteProcess(
-            cmd = ['ros2', 'bag', 'record'] + topics + ['-o', custom_folder],
-            output = 'screen'
-        ),
+        folder_name_arg,
+        OpaqueFunction(function=launch_setup),
     ])

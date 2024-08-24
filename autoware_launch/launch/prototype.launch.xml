@@ -91,7 +91,9 @@
   </group>
 
   <group if="$(var log_record)">
-    <include file="$(find-pkg-share autoware_launch)/launch/log_recorder.launch.py"/>
+    <include file="$(find-pkg-share autoware_launch)/launch/log_recorder.launch.py">
+      <arg name="folder_name" value="autoware_prototype"/>
+    </include>
   </group>
 
   <group if="$(var unity_trajectory)">
