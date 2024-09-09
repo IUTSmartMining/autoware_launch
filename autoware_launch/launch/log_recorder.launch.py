@@ -40,8 +40,10 @@ def launch_setup(context):
         '/sensing/vehicle_velocity_converter/twist_with_covariance',
         '/localization/pose_twist_fusion_filter/pose_with_covariance',
         '/localization/twist_estimator/twist_with_covariance',
+        '/localization/acceleration'
         '/planning/scenario_planning/trajectory',
         '/perception/object_recognition/objects',
+        '/tf'
     ]
 
     return [ExecuteProcess(
