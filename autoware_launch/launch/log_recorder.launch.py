@@ -43,7 +43,8 @@ def launch_setup(context):
         '/localization/acceleration'
         '/planning/scenario_planning/trajectory',
         '/perception/object_recognition/objects',
-        '/tf'
+        '/tf',
+        '/api/fail_safe/mrm_state'
     ]
 
     return [ExecuteProcess(
