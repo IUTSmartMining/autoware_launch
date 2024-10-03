@@ -1,7 +1,7 @@
 /**:
   ros__parameters:
     filter_target_label:
-      UNKNOWN : true
+      UNKNOWN : false
       CAR : false
       TRUCK : false
       BUS : false
@@ -10,7 +10,7 @@
       BICYCLE : false
       PEDESTRIAN : false
 
-    upper_bound_x: 100.0
+    upper_bound_x: 200.0
     lower_bound_x: 0.0
-    upper_bound_y: 10.0
-    lower_bound_y: -10.0
+    upper_bound_y: 200.0
+    lower_bound_y: -200.0
