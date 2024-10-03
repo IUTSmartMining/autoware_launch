@@ -5,8 +5,8 @@
 
     height_filter:
       use_height_filter: true
-      min_height: -1.0
-      max_height: 2.0
+      min_height: -5.0
+      max_height: 5.0
 
     # downsample input pointcloud
     downsample_input_pointcloud: true
