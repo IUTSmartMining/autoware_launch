@@ -43,7 +43,9 @@ def launch_setup(context):
         '/localization/acceleration'
         '/planning/scenario_planning/trajectory',
         '/perception/object_recognition/objects',
-        '/tf'
+        '/perception/object_recognition/detection/objects',
+        '/tf',
+        '/planning/scenario_planning/status/stop_reasons'
     ]
 
     return [ExecuteProcess(
