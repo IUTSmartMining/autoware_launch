@@ -99,4 +99,10 @@
   <group if="$(var unity_trajectory)">
     <node pkg="unity_trajectory" name="unity_topics" exec="unity_traj_node"/>
   </group>
+
+  <include file="$(find-pkg-share emaintenance_pkg)/launch/emaintenance.launch.xml"/>
+  
+  <!-- dio_autoware needs to root access -->
+  <!-- <include file="$(find-pkg-share do_pkg)/launch/dio_autoware.launch.py"/>   -->
+
 </launch>

@@ -47,6 +47,9 @@ def launch_setup(context):
         '/tf',
         '/planning/scenario_planning/status/stop_reasons',
         '/api/fail_safe/mrm_state',
+        '/localization/kinematic_state',
+        '/localization/pose_twist_fusion_filter/kinematic_state',
+
     ]
 
     return [ExecuteProcess(
